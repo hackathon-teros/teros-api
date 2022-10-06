@@ -3,7 +3,8 @@ import DataController from '../app/controllers/DataController';
 
 const router: Router = Router();
 
-router.get('/', DataController.index);
+router.get('/', (req, res) => res.send('hello'));
+router.get('/data', DataController.index);
 router.post('/',DataController.store);
 
 export default router;
