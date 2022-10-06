@@ -1,9 +1,9 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
+
+import { router } from './routes/index.routes';
 
 const app = express();
 
-app.post('/teros', (req: Request, res: Response) => {
-  return res.status(200).json({});
-});
+app.use(router);
 
 app.listen(8080);
