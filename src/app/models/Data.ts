@@ -1,6 +1,6 @@
-const mongoose = require('mongoose')
+import { Schema, model } from 'mongoose';
 
-const tabela = new mongoose.Schema({
+const dataSchema = new Schema({
     Codigo_da_oportunidade: Number,
     Classificacao_da_Oportunidade: String,
     Data_de_criacao: String,
@@ -11,31 +11,31 @@ const tabela = new mongoose.Schema({
     numero_relacionamentos_convertidos: Number,
     intervalo_tempo: Number,
     ano: Number,
-    Valor_corrigido2: Number,
+    Valor_corrigido2: String,
     Forma_de_Contratacao_Agregado: String,
     Concorrentes: Number,
     n_solucoes: Number,
     Software: Number,
-    Comissão_sobre_Parceiros: Number,
+    Comissao_sobre_Parceiros: Number,
     Cybersecurity: Number,
     Desdobramento_de_metas: Number,
     ESG: Number,
-    Equilíbrio_fiscal: Number,
+    Equilibrio_fiscal: Number,
     Skill_dev: Number,
-    Gestão_Estratégica: Number,
-    Gestão_da_Educação: Number,
-    Gestão_da_Operação: Number,
-    Gestão_da_Receita: Number,
-    Gestão_da_Saúde: Number,
-    Gestão_da_Segurança_Pública: Number,
-    Gestão_da_Segurança_Viária: Number,
-    Gestão_de_Gastos: Number,
-    Gestão_de_operações_projetizadas: Number,
-    Gestão_de_pessoas: Number,
+    Gestao_Estrategica: Number,
+    Gestao_da_Educacao: Number,
+    Gestao_da_Operacao: Number,
+    Gestao_da_Receita: Number,
+    Gestao_da_Saude: Number,
+    Gestao_da_Segurança_Publica: Number,
+    Gestao_da_Segurança_Viaria: Number,
+    Gestao_de_Gastos: Number,
+    Gestao_de_operações_projetizadas: Number,
+    Gestao_de_pessoas: Number,
     Processes_Excellence: Number,
     Produtos_digitais: Number,
     S_amp_OP_S_amp_OE: Number,
-    Transformação_Digital: Number,
+    Transformacao_Digital: Number,
     Treinamentos: Number,
     Roadmap: Number,
     Segmentacao: Number,
@@ -46,3 +46,5 @@ const tabela = new mongoose.Schema({
     Margem_Total: Number,
     ID_cliente: Number
 });
+
+export default model('ideias', dataSchema);

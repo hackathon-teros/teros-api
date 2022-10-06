@@ -1,9 +1,7 @@
-import express from 'express';
+import { connect } from './database/config';
+import app from './start/app';
 
-import { router } from './routes/index.routes';
-
-const app = express();
-
-app.use(router);
-
-app.listen(8080);
+app.listen(8080, () => {
+    connect();
+    console.log('server is running at http://localhost:8080 🔥');
+});
