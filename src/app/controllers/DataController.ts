@@ -53,13 +53,20 @@ class DataController {
         });
 
         const data = await Data.create(fileMapped);
-        return response.json(data).status(201);
+        return response.status(201).json(data);
     }
 
     async index(request: Request, response: Response) {
-        const datas = await Data.find({});
+        const data = await Data.find({});
 
-        return response.json(datas).status(200);
+        const dataMapped = data.map(item => {
+            const { Total_HH ,Faixa_de_Faturamento_Agregado, Valor_corrigido2, Carteira_Nova, Segmento_Agregado2, Custo_Total, Margem_Total } = item;
+
+            return { Total_HH ,Faixa_de_Faturamento_Agregado, Valor_corrigido2, Carteira_Nova, Segmento_Agregado2, Custo_Total, Margem_Total };
+        });
+        return response.json({
+            data: dataMapped,
+        }).status(200);
     }
 }
 

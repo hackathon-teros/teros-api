@@ -11,7 +11,7 @@ const dataSchema = new Schema({
     numero_relacionamentos_convertidos: Number,
     intervalo_tempo: Number,
     ano: Number,
-    Valor_corrigido2: String,
+    Valor_corrigido2: Number,
     Forma_de_Contratacao_Agregado: String,
     Concorrentes: Number,
     n_solucoes: Number,
