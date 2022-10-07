@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
-    "start": "node build/server.js",
+    "start": "node server.js",
     "build": "tsc",
     "postinstall": "npm run build"
   },
