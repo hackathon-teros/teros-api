@@ -1,5 +1,5 @@
-import { connect } from './src/database/config';
-import app from './src/start/app';
+import { connect } from './database/config';
+import app from './start/app';
 
 app.listen(8080, () => {
     connect();
